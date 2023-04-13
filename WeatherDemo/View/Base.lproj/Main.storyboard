@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="As3-E2-bpm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nff-JE-X6s">
+            <objects>
+                <viewController id="As3-E2-bpm" customClass="ViewController" customModule="WeatherDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IC9-EH-4oi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please search location here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yX-xh-KUV">
+                                <rect key="frame" x="20" y="119" width="353" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="XIB-KT-C7Z"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="As3-E2-bpm" id="b9J-ID-Lh1"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaH-Ed-qL6">
+                                <rect key="frame" x="20" y="195" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3hm-tn-gJY">
+                                <rect key="frame" x="303" y="212.66666666666663" width="70" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuc-XO-aqw">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-pb-Y7q">
+                                        <rect key="frame" x="0.0" y="55.000000000000028" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="1TC-K3-vih"/>
+                                            <constraint firstAttribute="height" constant="70" id="bHn-1T-m83"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdK-oM-DVM">
+                                <rect key="frame" x="20" y="215" width="0.0" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="lOu-Mf-pBu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Psc-tg-jG4">
+                                <rect key="frame" x="30" y="663" width="333" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JOl-dl-m1L">
+                                        <rect key="frame" x="0.0" y="2" width="101" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-NX-VxV">
+                                                <rect key="frame" x="25.666666666666664" y="0.0" width="49.999999999999993" height="50"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeY-VK-WOt">
+                                                <rect key="frame" x="14" y="55" width="73" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-hv-4HL">
+                                        <rect key="frame" x="116" y="2" width="101" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-x2-dsp">
+                                                <rect key="frame" x="25.666666666666657" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ona-Zy-aEF">
+                                                <rect key="frame" x="36.666666666666657" y="55" width="28" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-pG-qVa">
+                                        <rect key="frame" x="232" y="2" width="101" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmG-e7-Q7i">
+                                                <rect key="frame" x="25.666666666666686" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdI-F1-eUC">
+                                                <rect key="frame" x="35" y="55" width="31.333333333333329" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="0.89560724729999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.15395885749999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="RT8-vS-ftM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oLo-is-2mn"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="oLo-is-2mn" firstAttribute="trailing" secondItem="0yX-xh-KUV" secondAttribute="trailing" constant="20" id="Guh-Ze-PHD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QaH-Ed-qL6" secondAttribute="trailing" constant="20" symbolic="YES" id="Hzr-pY-XaS"/>
+                            <constraint firstItem="QaH-Ed-qL6" firstAttribute="leading" secondItem="0yX-xh-KUV" secondAttribute="leading" id="NNo-yU-Trl"/>
+                            <constraint firstItem="3hm-tn-gJY" firstAttribute="centerY" secondItem="RdK-oM-DVM" secondAttribute="centerY" id="NTr-SJ-ppy"/>
+                            <constraint firstItem="0yX-xh-KUV" firstAttribute="leading" secondItem="oLo-is-2mn" secondAttribute="leading" constant="20" id="Nlk-vb-Tf7"/>
+                            <constraint firstItem="oLo-is-2mn" firstAttribute="bottom" secondItem="Psc-tg-jG4" secondAttribute="bottom" constant="75" id="Nn8-TT-5mm"/>
+                            <constraint firstItem="Psc-tg-jG4" firstAttribute="leading" secondItem="oLo-is-2mn" secondAttribute="leading" constant="30" id="W9W-PR-0W8"/>
+                            <constraint firstItem="QaH-Ed-qL6" firstAttribute="top" secondItem="0yX-xh-KUV" secondAttribute="bottom" constant="30" id="Ybl-Xl-ogb"/>
+                            <constraint firstItem="RdK-oM-DVM" firstAttribute="top" secondItem="QaH-Ed-qL6" secondAttribute="bottom" constant="20" id="aVf-WH-lsR"/>
+                            <constraint firstItem="oLo-is-2mn" firstAttribute="trailing" secondItem="Psc-tg-jG4" secondAttribute="trailing" constant="30" id="feO-9k-cJJ"/>
+                            <constraint firstItem="RdK-oM-DVM" firstAttribute="leading" secondItem="0yX-xh-KUV" secondAttribute="leading" id="jdd-Cw-tyG"/>
+                            <constraint firstItem="oLo-is-2mn" firstAttribute="trailing" secondItem="3hm-tn-gJY" secondAttribute="trailing" constant="20" id="nbc-L8-oc1"/>
+                            <constraint firstItem="0yX-xh-KUV" firstAttribute="top" secondItem="oLo-is-2mn" secondAttribute="top" constant="60" id="tD0-PR-yhn"/>
+                            <constraint firstItem="3hm-tn-gJY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RdK-oM-DVM" secondAttribute="trailing" constant="8" symbolic="YES" id="zPN-Jy-xyD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="humidityLabel" destination="F7z-NX-VxV" id="zxR-9p-0WV"/>
+                        <outlet property="locationLabel" destination="QaH-Ed-qL6" id="SYU-Cr-oOZ"/>
+                        <outlet property="locationSearchField" destination="0yX-xh-KUV" id="UPC-fq-bGb"/>
+                        <outlet property="maxTemperatureLabel" destination="NmG-e7-Q7i" id="1dG-2r-85z"/>
+                        <outlet property="minTemperatureLabel" destination="eIw-x2-dsp" id="HHS-oE-7kA"/>
+                        <outlet property="temperatureLabel" destination="RdK-oM-DVM" id="5Wv-1P-gdk"/>
+                        <outlet property="weatherDetailsStackView" destination="Psc-tg-jG4" id="30l-5W-bFY"/>
+                        <outlet property="weatherDiscriptionLabel" destination="Fuc-XO-aqw" id="sde-aH-MLD"/>
+                        <outlet property="wetherImage" destination="fc3-pb-Y7q" id="R6B-TI-YsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaQ-uh-LU8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1506" y="-55"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
